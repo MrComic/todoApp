@@ -12,7 +12,7 @@ export class TodoService {
   constructor(private http:HttpClient) { }
 
   getTodos():Observable<TodoModel|TodoModel[]> {
-    return this.http.get<TodoModel>("https://jsonplaceholder.typicode.com/todos/").pipe(
-      tap(_ => console.log('fetched heroes')));
+    return this.http.get<TodoModel>("https://jsonplaceholder.typicode.com/todos/")
+      .pipe(tap(_ => console.log('list loaded')));
   }
 }
