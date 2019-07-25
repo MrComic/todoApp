@@ -1,0 +1,28 @@
+<mat-sidenav-container>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <div fxHide.gt-xs>
+        <button mat-icon-button>
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+      <div>
+        <a>
+          Todo App
+        </a>
+      </div>
+
+    </mat-toolbar>
+    <main  >
+
+      <ul>
+        <li *ngFor="let todo of list">
+          <p [ngStyle]="todo.completed?{'text-decoration':'line-through'}:{}" >
+            {{todo.title}}
+            {{todo.completed}}
+          </p>
+        </li>
+      </ul>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
