@@ -19,7 +19,6 @@
         <li *ngFor="let todo of list">
           <p [ngStyle]="todo.completed?{'text-decoration':'line-through'}:{}" >
             {{todo.title}}
-            {{todo.completed}}
           </p>
         </li>
       </ul>
